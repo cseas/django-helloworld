@@ -22,8 +22,16 @@ python3 manage.py runserver
 ```
 This sets up a local server for your web project.
 Open in browser:
-[http://localhost:8000/][http://localhost:8000/]
+<http://localhost:8000/>
 If you get a "Congratulations!" page displayed, you're good to proceed.
+
+Step 4:
+Run in the terminal:
+```shell
+python3 manage.py startapp firstApp
+```
+This will initialise an app inside your Django project.
+Include your app in the project by adding the app's name 'firstApp' in INSTALLED_APPS in the project's settings.py file.
 
 Software information:
 Ubuntu 16.04 LTS
