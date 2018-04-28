@@ -2,6 +2,7 @@
 Create your first Django web application and quickly go through the basics of the open-source python based web framework.
 \
 \
+\
 Step 1: Run in the terminal:
 ```shell
 django-admin startproject firstProject
@@ -16,6 +17,7 @@ python3 manage.py migrate
 This initialises the sqlite3 database.
 \
 \
+\
 Step 3: Run in the terminal:
 ```shell
 python3 manage.py runserver
@@ -25,12 +27,14 @@ Open in browser: <http://localhost:8000/>
 If you get a "Congratulations!" page displayed, you're good to proceed.
 \
 \
+\
 Step 4: Run in the terminal:
 ```shell
 python3 manage.py startapp firstApp
 ```
 This will initialise an app inside your Django project.  
 Include your app in the project by adding the app's name 'firstApp' in INSTALLED_APPS in the project's settings.py file.
+\
 \
 \
 Step 5: Include app's urls for project's home page.  
@@ -57,6 +61,7 @@ urlpatterns = [
 ]
 ```
 This will add the home url for the app.
+\
 \
 \
 Step 7: Populate views.py inside the app by adding the following lines:
@@ -89,6 +94,7 @@ You'll see your home.html displayed.
 Note that <http://localhost:8000/> will now show a Page Not Found error.
 \
 \
+\
 Step 9: Time to create a model.  
 Add the following to models.py inside firstApp.
 ```python
@@ -101,6 +107,16 @@ Register this model by adding following lines to admin.py inside firstApp.
 from . import models
 admin.site.register(models.Person)
 ```
+\
+\
+Step 10: Register superuser using the following command in terminal:
+```shell
+python3 manage.py createsuperuser
+```
+Here for this example, we've used:  
+Username: hello  
+Email: abc@123.com  
+Password: helloworld  
 \
 \
 Software information:  
