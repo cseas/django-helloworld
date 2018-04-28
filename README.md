@@ -119,6 +119,18 @@ Email: abc@123.com
 Password: helloworld  
 \
 \
+\
+Step 11: Create migrations using the following terminal commands:
+```shell
+python3 manage.py makemigrations
+```
+This will create model Person.
+Apply the migrations using:
+```shell
+python3 manage.py migrate
+```
+\
+\
 Software information:  
 Ubuntu 16.04 LTS  
 Python 3.5.2  
