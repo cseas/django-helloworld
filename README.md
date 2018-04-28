@@ -7,7 +7,7 @@ Step 1: Run in the terminal:
 django-admin startproject firstProject
 ```
 \
-\ 
+\
 Step 2: Run in the terminal:
 ```shell
 cd firstProject
@@ -15,7 +15,7 @@ python3 manage.py migrate
 ```
 This initialises the sqlite3 database.
 \
-\ 
+\
 Step 3: Run in the terminal:
 ```shell
 python3 manage.py runserver
@@ -24,7 +24,7 @@ This sets up a local server for your web project.
 Open in browser: <http://localhost:8000/>  
 If you get a "Congratulations!" page displayed, you're good to proceed.
 \
-\ 
+\
 Step 4: Run in the terminal:
 ```shell
 python3 manage.py startapp firstApp
@@ -32,7 +32,7 @@ python3 manage.py startapp firstApp
 This will initialise an app inside your Django project.  
 Include your app in the project by adding the app's name 'firstApp' in INSTALLED_APPS in the project's settings.py file.
 \
-\ 
+\
 Step 5: Include app's urls for project's home page.  
 To do this, add the following to urlpatterns in project's urls.py file.
 ```python
@@ -43,7 +43,7 @@ This will need the include method, so modify the django.urls import in the same 
 from django.urls import path, include
 ```
 \
-\ 
+\
 Step 6: Create urls.py inside firstApp with following code.
 ```python
 from django.urls import path
@@ -58,7 +58,7 @@ urlpatterns = [
 ```
 This will add the home url for the app.
 \
-\ 
+\
 Step 7: Populate views.py inside the app by adding the following lines:
 ```python
 def home(request):
@@ -83,6 +83,23 @@ Here's a basic HTML layout.
         </h1>
     </body>
 </html>
+```
+Run server from manage.py as before and visit <http://localhost:8000/home/>  
+You'll see your home.html displayed.  
+Note that <http://localhost:8000/> will now show a Page Not Found error.
+\
+\
+Step 9: Time to create a model.  
+Add the following to models.py inside firstApp.
+```python
+class Person(models.Model):
+    first_name = models.CharField(max_length = 30)
+    last_name = models.CharField(max_length = 30)
+```
+Register this model by adding following lines to admin.py inside firstApp.
+```python
+from . import models
+admin.site.register(models.Person)
 ```
 \
 \
