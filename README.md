@@ -24,7 +24,8 @@ python3 manage.py runserver
 ```
 This sets up a local server for your web project.  
 Open in browser: <http://localhost:8000/>  
-If you get a "Congratulations!" page displayed, you're good to proceed.
+If you get a "Congratulations!" page displayed, you're good to proceed.  
+You can close the server using Ctrl+C.
 \
 \
 \
@@ -129,6 +130,24 @@ Apply the migrations using:
 ```shell
 python3 manage.py migrate
 ```
+\
+\
+Step 12: We're ready to test what we've built.  
+Run server using manage.py and visit: <http://localhost:8000/admin/>  
+Login using the credentials you created earlier.  
+Inside site administration, you'll see 0 Groups and 1 Users.  
+Let's create a Person object.  
+Go to Persons > Add Person  
+Enter details, then Save.  
+You'll see a new Person object created bearing the details you entered.
+\
+\
+That's it. You've successfully created your Django: Hello, World! web application which you are the administrator of.
+
+# What next?
+You can explore further using following reference links:
+<https://docs.djangoproject.com/en/2.0/topics/db/models/>
+<https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction>
 \
 \
 Software information:  
