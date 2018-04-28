@@ -1,2 +1,6 @@
-# django-helloworld
-Introductory Django web application created during Web Development Workshop in Sir M Visvesvaraya Institute of Technology, Bangalore.
+# Django Hello, World!
+Create your first Django web application and quickly go through the basics of the open-source python based web framework.
+
+Step 1:
+Run in the terminal:
+django-admin startproject firstProject
